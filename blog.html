@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - BlogSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .blog-header {
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9)),
+                        url('https://source.unsplash.com/random/1920x1080?writing') center/cover;
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .blog-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-post {
+            background: var(--background);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-post-content {
+            padding: 1.5rem;
+        }
+
+        .blog-post-meta {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .blog-post-tag {
+            background: var(--light-background);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>BlogSpace</h1>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <h2>Our Blog</h2>
+            <p>Discover the latest articles and insights</p>
+        </section>
+
+        <section class="blog-grid">
+            <article class="blog-post">
+                <img src="https://source.unsplash.com/random/800x600?technology" alt="Technology">
+                <div class="blog-post-content">
+                    <div class="blog-post-meta">
+                        <span>March 15, 2024</span> • <span>5 min read</span>
+                    </div>
+                    <h3>The Future of Artificial Intelligence</h3>
+                    <p>Exploring the latest developments in AI and their potential impact on society.</p>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">Technology</span>
+                        <span class="blog-post-tag">AI</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="https://source.unsplash.com/random/800x600?travel" alt="Travel">
+                <div class="blog-post-content">
+                    <div class="blog-post-meta">
+                        <span>March 14, 2024</span> • <span>4 min read</span>
+                    </div>
+                    <h3>Hidden Gems: Off the Beaten Path</h3>
+                    <p>Discover lesser-known travel destinations that will take your breath away.</p>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">Travel</span>
+                        <span class="blog-post-tag">Adventure</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="https://source.unsplash.com/random/800x600?food" alt="Food">
+                <div class="blog-post-content">
+                    <div class="blog-post-meta">
+                        <span>March 13, 2024</span> • <span>6 min read</span>
+                    </div>
+                    <h3>The Art of Culinary Innovation</h3>
+                    <p>How modern chefs are revolutionizing traditional cooking techniques.</p>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">Food</span>
+                        <span class="blog-post-tag">Cooking</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="https://source.unsplash.com/random/800x600?fitness" alt="Fitness">
+                <div class="blog-post-content">
+                    <div class="blog-post-meta">
+                        <span>March 12, 2024</span> • <span>4 min read</span>
+                    </div>
+                    <h3>Fitness Trends for 2024</h3>
+                    <p>Stay ahead of the curve with these emerging fitness trends.</p>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">Fitness</span>
+                        <span class="blog-post-tag">Health</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="https://source.unsplash.com/random/800x600?business" alt="Business">
+                <div class="blog-post-content">
+                    <div class="blog-post-meta">
+                        <span>March 11, 2024</span> • <span>7 min read</span>
+                    </div>
+                    <h3>Digital Marketing Strategies</h3>
+                    <p>Effective digital marketing strategies for small businesses in 2024.</p>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">Business</span>
+                        <span class="blog-post-tag">Marketing</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="https://source.unsplash.com/random/800x600?environment" alt="Environment">
+                <div class="blog-post-content">
+                    <div class="blog-post-meta">
+                        <span>March 10, 2024</span> • <span>5 min read</span>
+                    </div>
+                    <h3>Sustainable Living</h3>
+                    <p>Simple ways to reduce your environmental footprint in daily life.</p>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">Environment</span>
+                        <span class="blog-post-tag">Sustainability</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BlogSpace</h3>
+                <p>Your source for engaging content and thought-provoking articles.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BlogSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
